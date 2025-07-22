@@ -1,0 +1,35 @@
+<section class="hero">
+   <div class="container">
+      <h2>Hola, soy tu asistente virtual Sami</h2>
+      <p class="lead">¿Tienes preguntas sobre admisión, matrícula o servicios? ¡Estoy aquí para ayudarte!</p>
+   </div>
+</section>
+
+<section class="py-5">
+   <div class="container">
+      <div class="row justify-content-center">
+         <div class="col-md-8">
+            <div class="chat-box" #chatBox>
+               <div *ngFor="let msg of mensajes" [ngClass]="{'message-user': msg.tipo === 'user', 'message-bot d-flex align-items-start': msg.tipo === 'bot'}">
+                  <ng-container *ngIf="msg.tipo === 'bot'">
+                     <img src="https://www.shutterstock.com/image-vector/chat-bot-icon-virtual-smart-600nw-2478937555.jpg"
+                          class="bot-avatar me-2"
+                          alt="Bot" />
+                  </ng-container>
+                  <div class="message" [ngClass]="{'ms-auto': msg.tipo === 'user'}">{{ msg.texto }}</div>
+               </div>
+            </div>
+
+            <!-- Chat input -->
+            <div class="chat-input d-flex mt-3">
+               <input type="text"
+                      class="form-control me-2"
+                      placeholder="Escribe tu mensaje..."
+                      [(ngModel)]="mensaje"
+                      (keypress)="detectarEnter($event)" />
+               <button class="btn btn-danger" (click)="enviarMensaje()">Enviar</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

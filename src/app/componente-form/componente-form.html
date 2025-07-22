@@ -1,0 +1,63 @@
+<section class="py-5" aria-labelledby="titulo-formulario">
+    <div class="container">
+        <h3 id="titulo-formulario" class="mb-2 p-4 text-center text-danger">Formulario de Reclamos</h3>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form [formGroup]="userForm" (bgSubmit)="guardar()">
+                    <div class="mb-2">
+                        <label for="nombre" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="nombre" formControlName="nombre"
+                            placeholder="Ej. Juan Pérez" required>
+                        @if (userForm.get('nombre')?.invalid && userForm.get('nombre')?.touched) {
+                        <div class="form-text text-danger">
+                            El nombre debe ser más de 10 carácteres
+                        </div>
+                        }
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Correo institucional</label>
+                        <input type="email" class="form-control" id="correo" formControlName="correo"
+                            placeholder="tucorreo@utp.edu.pe" required>
+                        @if (userForm.get('correo')?.invalid && userForm.get('correo')?.touched) {
+                        <div class="form-text text-danger">
+                            Debe ser un correo valido.
+                        </div>
+                        }
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tipo" class="form-label">Tipo de reclamo</label>
+                        <select class="form-select" id="tipo" formControlName="tipo" required>
+                            <option selected disabled value="">Selecciona una opción</option>
+                            <option>Problemas con matrícula</option>
+                            <option>Docente no responde</option>
+                            <option>Problemas con notas</option>
+                            <option>Acceso a Aula Virtual</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="detalle" class="form-label">Descripción del reclamo</label>
+                        <textarea class="form-control" id="detalle" formControlName="detalle" rows="4"
+                            placeholder="Describe tu reclamo con detalle" required></textarea>
+                        @if (userForm.get('detalle')?.invalid && userForm.get('detalle')?.touched) {
+                        <div class="form-text text-danger">
+                            El detalle debe ser más de 5 carácteres
+                        </div>
+                        }
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" [disabled]="!userForm.valid" s class="btn btn-danger">Enviar
+                            Reclamo</button>
+                    </div>
+                </form>
+
+                <pre class="p-4">{{ mostrarvalores() }}</pre>
+            </div>
+        </div>
+    </div>
+</section>
