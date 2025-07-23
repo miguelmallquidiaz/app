@@ -1,59 +1,33 @@
-# Myapp
+# 📚 Sami – Asistente Virtual para Atención al Estudiante
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.2.
+**Sami** es una aplicación web desarrollada para mejorar la atención al estudiante universitario, reduciendo tiempos de espera y resolviendo dudas frecuentes de manera inmediata mediante una interfaz conversacional.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📷 Capturas de Pantalla
 
-```bash
-ng serve
-```
+![Vista de la app SAMI](public/assets/sami1.jpg)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+![Vista de la app SAMI](public/assets/sami2.jpg)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🚀 Descripción del Proyecto
 
-```bash
-ng generate component component-name
-```
+Desarrollé esta app como respuesta a un problema que viví: **tiempos de espera innecesarios en la atención al estudiante**. Con **Angular** para el frontend, **FastAPI** para el backend y un modelo de lenguaje (Gemini), creé un asistente virtual capaz de responder preguntas frecuentes en tiempo real.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+El mayor logro fue convertir una necesidad real en una solución funcional, aplicando todo lo aprendido en el taller de Angular y viendo el impacto de una solución bien pensada en un contexto real.
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 🛠️ Tecnologías Utilizadas
+- **Frontend:** Angular
+- **Backend:** FastAPI (Python)
+- **IA/Modelo conversacional:** Gemini
+- **Entorno de desarrollo:** Firebase Studio
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## Link del backend
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+https://github.com/miguelmallquidiaz/backend_asistente_ia 
